@@ -6,6 +6,7 @@ path = "/usr/local/bin/python3"
 parts = path.split("/")
 result_path = "-".join(parts[1:4]) 
 
+
 print(f"課題1 (Path): {result_path}") # 出力: usr-local-bin
 
 
