@@ -4,7 +4,7 @@ path = "/usr/local/bin/python3"
 parts = path.split("/")
 result_path = "-".join(parts[1:4])
 
-print(f"課題１：{result_parts}")
+print(f"課題１：{result_path}")
 
 # 2. パーミッションの0埋め
 perm_num = 7
@@ -24,7 +24,7 @@ print(f"課題３: {str_ports}")
 def netmask_to_cidr(mask_str):
     # ここにロジックを書く
     octets = mask_str.split(".")
-    binary_octets = [bin(int(o))[2:].zfill(8) for o octets]
+    binary_octets = [bin(int(o))[2:].zfill(8) for o in octets]
     cidr = "".join(binary_octets)
     return cidr.count('1')
     pass
