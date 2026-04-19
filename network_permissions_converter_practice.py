@@ -1,4 +1,4 @@
-# 1. パスの操作
+# 1. パスの操作test_WSL
 path = "/usr/local/bin/python3"
 
 parts = path.split("/")
