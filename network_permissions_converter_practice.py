@@ -29,4 +29,4 @@ def netmask_to_cidr(mask_str):
     return cidr.count('1')
     pass
 
-print(f"255.255.0.0 は CIDRで: {netmask_to_cidr('255.255.0.0')}")
+print(f"255.255.0.0 は CIDRで: {netmask_to_cidr('255.255.0.0')}")ss
