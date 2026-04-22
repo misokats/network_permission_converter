@@ -4,11 +4,13 @@ has_bike = False
 has_car = False
 has_ride_share_app = False
 
-if distance_mi <= 1 and is_raining == False:
+if distance_mi <= 0:
+    print(False)
+elif distance_mi <= 1 and is_raining:
     print(True)
-elif 6 >= distance_mi > 1 and has_bike == True and is_raining == False:
+elif 6 >= distance_mi > 1 and has_bike and not is_raining:
     print(True)
-elif distance_mi > 6 and (has_car == True or has_ride_share _app == True or):
+elif distance_mi > 6 and (has_car or has_ride_share_app):
     print(True)
 else:
     print(False) 
