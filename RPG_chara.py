@@ -31,18 +31,26 @@ def create_character(name, strength, intelligence, charisma):
     if not all(s >= 1 for s in stats):
         return 'All stats should be no less than 1'
 
-    #14,15,All stats should be no more than 4
-    if all(s >= 4 for s in stats):
+    #14,15,when all stats are higher than 4
+    if not all(s > 4 for s in stats):
         return 'All stats should be no more than 4'
 
     #16,17,stats should't sum to 7
     if all(sum(stats) != 7 for s in stats):
         return 'The character should start with 7 points'
 
-    #18, format dot
-    return(f"strength {full_dot*5}")
-    
-ren = create_character('ren',4,2,1)
-print(ren)
+    #18, format stat
+    def format_stat(label, value):
+        full_dots = full_dot * value
+        empty_dots = empty_dot * (10 - value)
+        return f"{label} {full_dots}{empty_dots}"
 
+    result = (
+        f"{name}\n"
+        f"{format_stat('STR', strength)}\n"
+        f"{format_stat('INT', intelligence)}\n"
+        f"{format_stat('CHA', charisma)}"
+    )
     
+    return result
+     
